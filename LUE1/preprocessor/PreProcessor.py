@@ -37,6 +37,6 @@ class PreProcessor:
 
 
 # Arguments : Path to input file, Path to config file, Path to output file
-# e.g. python PreProcessing.py tweets.txt preprocess_config.json cleaned_data.txt
+# e.g. python PreProcessor.py tweets.txt preprocess_config.json cleaned_data.txt
 if __name__ == '__main__':
     pre_process(sys.argv[1], sys.argv[2], sys.argv[3])
