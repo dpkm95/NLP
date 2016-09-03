@@ -17,6 +17,7 @@ class PreProcessor:
                 # Replace all the hashtags with HASHTAG token
                 for k, v in config['replace_tokens'].items():
                     line = re.sub(v, k, line)
+                # Replacing the emoticons with their title.
                 for title, icons in config['emoticons'].items():
                     for icon in icons:
                         line = line.replace(icon, title)
@@ -41,4 +42,5 @@ class PreProcessor:
 # Arguments : Path to input file, Path to config file, Path to output file
 # e.g. python PreProcessor.py tweets.txt preprocess_config.json cleaned_data.txt
 if __name__ == '__main__':
-    pre_process(sys.argv[1], sys.argv[2], sys.argv[3])
+    p=PreProcessor()
+    p.pre_process(sys.argv[1], sys.argv[2], sys.argv[3])
